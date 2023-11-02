@@ -3,6 +3,7 @@ import "./app.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Box } from "@mui/material";
 import Navbar from "./components/NavBar";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import ExerciseDetail from "./pages/ExerciseDetail";
 const App = () => {
@@ -14,7 +15,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/execise/:id" element={<ExerciseDetail />} />
         </Routes>
-        <div>App</div>
+        <Footer/>
       </Box>
     </BrowserRouter>
   );
