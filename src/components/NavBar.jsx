@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <Stack
       direction="row"
-      justifyContent="space-around"
+      justifyContent="space-around"s
       sx={{
         gap: { sm: "122px", xs: "40px" },
         mt: { sm: "32px", xs: "20px" },
