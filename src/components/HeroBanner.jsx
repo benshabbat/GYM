@@ -20,12 +20,12 @@ const HeroBanner = () => {
           fontSize: { lg: "44px", xs: "40px" },
         }}
       >
-        Welcome to the our Gym Club :)
+        Welcome to our Gym Club :)
       </Typography>
       <Typography fontSize="24px" lineHeight="35px" mb={2}>
         You can looking on our Exercises section
       </Typography>
-      <Button variant="contained" color="error" href="#exercises">
+      <Button variant="contained"  href="#exercises" color="error" sx={{backgroundColor:"#ff2625"}}>
         Explore Exercises
       </Button>
       <img src={ImgBanner} alt="ImgBanner" className="hero-banner-img" />
