@@ -17,7 +17,7 @@ const HeroBanner = () => {
       <Typography
         fontWeight={700}
         sx={{
-          fontSize: { lg: "44px", xs: "40px" },
+          fontSize: { lg: "44px", xs: "30px" },
         }}
       >
         Welcome to our Gym Club :)

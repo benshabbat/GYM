@@ -1,9 +1,18 @@
-import React,{useEffect,useState} from 'react'
-import { Box, Stack, TextField, Button,Typography } from "@mui/material";
+import React, { useEffect, useState } from "react";
+import { Box, Stack, TextField, Button, Typography } from "@mui/material";
 const SearchExercises = () => {
   return (
-    <div>SearchExercises</div>
-  )
-}
+    <Stack alignItems="center" mt="36px" justifyContent="center" p="20px">
+      <Typography
+        fontWeight={700}
+        sx={{
+          fontSize: { lg: "44px", xs: "30px" },
+        }}
+      >
+        You can to find our Exercises
+      </Typography>
+    </Stack>
+  );
+};
 
-export default SearchExercises
+export default SearchExercises;
