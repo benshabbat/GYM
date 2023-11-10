@@ -8,9 +8,15 @@ const SearchExercises = () => {
         sx={{
           fontSize: { lg: "44px", xs: "30px" },
         }}
+        mb="52px"
+        textAlign="center"
       >
         You can to find our Exercises
       </Typography>
+      <Box position="relative" mb="72px">
+        <TextField/>
+        <Button></Button>
+      </Box>
     </Stack>
   );
 };
