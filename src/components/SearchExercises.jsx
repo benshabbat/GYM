@@ -21,11 +21,17 @@ const SearchExercises = () => {
           onChange={(e) => {}}
           sx={{
             input: { border: "none", borderRadius: "4px", fontWeight: "700" },
-            width:{lg:"1170px",xs:"350px"},
-            borderRadius:"40px"
+            width: { lg: "1170px", xs: "350px" },
+            borderRadius: "40px",
           }}
         />
-        <Button>Search</Button>
+        <Button
+          variant="contained"
+          color="error"
+          sx={{ backgroundColor: "#ff2625" }}
+        >
+          Search
+        </Button>
       </Box>
     </Stack>
   );
