@@ -26,9 +26,17 @@ const SearchExercises = () => {
           }}
         />
         <Button
-          variant="contained"
-          color="error"
-          sx={{ backgroundColor: "#ff2625" }}
+          className="search-btn"
+          sx={{
+            backgroundColor: "#FF2625",
+            color: "#fff",
+            textTransform: "none",
+            width: { lg: "173px", xs: "80px" },
+            height: "56px",
+            position: "absolute",
+            right: "0px",
+            fontSize: { lg: "20px", xs: "14px" },
+          }}
         >
           Search
         </Button>
