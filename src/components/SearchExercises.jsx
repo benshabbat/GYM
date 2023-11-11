@@ -14,8 +14,18 @@ const SearchExercises = () => {
         You can to find our Exercises
       </Typography>
       <Box position="relative" mb="72px">
-        <TextField/>
-        <Button></Button>
+        <TextField
+          height="76px"
+          placeholder="Search Exercises"
+          type="text"
+          onChange={(e) => {}}
+          sx={{
+            input: { border: "none", borderRadius: "4px", fontWeight: "700" },
+            width:{lg:"1170px",xs:"350px"},
+            borderRadius:"40px"
+          }}
+        />
+        <Button>Search</Button>
       </Box>
     </Stack>
   );
