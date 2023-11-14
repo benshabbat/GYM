@@ -6,6 +6,10 @@ const SearchExercises = () => {
     const { value } = e.target;
     setSearch(value.lowerCase());
   };
+  const handleSearch = async() =>{
+    
+
+  }
   return (
     <Stack alignItems="center" mt="36px" justifyContent="center" p="20px">
       <Typography
@@ -43,6 +47,7 @@ const SearchExercises = () => {
             right: "0px",
             fontSize: { lg: "20px", xs: "14px" },
           }}
+          onClick={handleSearch}
         >
           Search
         </Button>
