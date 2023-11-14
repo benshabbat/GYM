@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { Box, Stack, TextField, Button, Typography } from "@mui/material";
+import { fetchData, execisesOptions } from "../utils/fetchData";
 const SearchExercises = () => {
   const [search, setSearch] = useState();
   const searchExercises = (e) => {
     const { value } = e.target;
     setSearch(value.lowerCase());
   };
-  const handleSearch = async() =>{
-    
-
-  }
+  const handleSearch = async () => {
+    if (search) {
+      const exercise = await fetchData();
+    }
+  };
   return (
     <Stack alignItems="center" mt="36px" justifyContent="center" p="20px">
       <Typography
