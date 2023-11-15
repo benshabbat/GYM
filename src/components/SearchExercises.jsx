@@ -7,7 +7,7 @@ const SearchExercises = () => {
     const { value } = e.target;
     setSearch(value.lowerCase());
   };
-  const url = "https://exercisedb.p.rapidapi.com/exercises/bodyPart/back";
+  const url = "https://exercisedb.p.rapidapi.com/exercises";
   const handleSearch = async () => {
     if (search) {
       const exerciseData = await fetchData(url, execisesOptions);
