@@ -3,6 +3,7 @@ import { Box, Stack, TextField, Button, Typography } from "@mui/material";
 import { fetchData, execisesOptions } from "../utils/fetchData";
 const SearchExercises = () => {
   const [search, setSearch] = useState("");
+  const [exercises, setExercises] = useState([]);
   const searchExercises = (e) => {
     const { value } = e.target;
     setSearch(value?.toLowerCase());
@@ -11,14 +12,16 @@ const SearchExercises = () => {
   const handleSearch = async () => {
     if (search) {
       const exerciseData = await fetchData(url, execisesOptions);
-      // const searchedExercises = exerciseData?.name
-      console.log(exerciseData)
-      const searchedExercises = exerciseData?.filter(exercise =>
-        exercise?.name?.toLowerCase?.includes(search)
-        ||exercise?.equipment?.toLowerCase?.includes(search)
-        ||exercise?.target?.toLowerCase?.includes(search)
-        ||exercise?.bodyPart?.toLowerCase?.includes(search)
-      )
+      const searchedExercises = exerciseData?.filter(
+        (exercise) =>
+          exercise?.name?.toLowerCase?.includes(search) ||
+          exercise?.equipment?.toLowerCase?.includes(search) ||
+          exercise?.target?.toLowerCase?.includes(search) ||
+          exercise?.bodyPart?.toLowerCase?.includes(search)
+      );
+      setSearch("");
+      setExercises(searchedExercises);
+      console.log(exerciseData);
     }
   };
   return (
