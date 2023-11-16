@@ -11,6 +11,8 @@ const SearchExercises = () => {
   const handleSearch = async () => {
     if (search) {
       const exerciseData = await fetchData(url, execisesOptions);
+      // const searchedExercises = exerciseData?.name
+      console.log(exerciseData)
     }
   };
   return (
