@@ -1,6 +1,6 @@
 export const execisesOptions = {
     method: 'GET',
-    params: {limit: '10'},
+    // params: {limit: '10'},
     headers: {
       'X-RapidAPI-Key':process.env.RAPID_API_KEY ,
       'X-RapidAPI-Host': process.env.RAPID_API_HOST

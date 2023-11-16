@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Box, Stack, TextField, Button, Typography } from "@mui/material";
 import { fetchData, execisesOptions } from "../utils/fetchData";
 const SearchExercises = () => {
-  const [search, setSearch] = useState();
+  const [search, setSearch] = useState("");
   const searchExercises = (e) => {
     const { value } = e.target;
-    setSearch(value.lowerCase());
+    setSearch(value?.toLowerCase());
   };
   const url = "https://exercisedb.p.rapidapi.com/exercises";
   const handleSearch = async () => {
