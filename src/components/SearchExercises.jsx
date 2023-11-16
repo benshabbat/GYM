@@ -13,6 +13,12 @@ const SearchExercises = () => {
       const exerciseData = await fetchData(url, execisesOptions);
       // const searchedExercises = exerciseData?.name
       console.log(exerciseData)
+      const searchedExercises = exerciseData?.filter(exercise =>
+        exercise?.name?.toLowerCase?.includes(search)
+        ||exercise?.equipment?.toLowerCase?.includes(search)
+        ||exercise?.target?.toLowerCase?.includes(search)
+        ||exercise?.bodyPart?.toLowerCase?.includes(search)
+      )
     }
   };
   return (
