@@ -4,6 +4,19 @@ import { fetchData, execisesOptions } from "../utils/fetchData";
 const SearchExercises = () => {
   const [search, setSearch] = useState("");
   const [exercises, setExercises] = useState([]);
+  const [bodyParts, setBodyParts] = useState([]);
+
+  useEffect(() => {
+    const fetchExercises = async () => {
+      const bodyPartsData = await fetchData(
+        url + "/bodyPartsList",
+        execisesOptions
+      );
+      setBodyParts(["all", ...bodyPartsData]);
+    };
+    fetchExercises();
+  }, []);
+
   const searchExercises = (e) => {
     const { value } = e.target;
     setSearch(value?.toLowerCase());
@@ -21,7 +34,6 @@ const SearchExercises = () => {
       );
       setSearch("");
       setExercises(searchedExercises);
-      console.log(exerciseData);
     }
   };
   return (
