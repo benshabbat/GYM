@@ -2,10 +2,9 @@ export const execisesOptions = {
   method: "GET",
   headers: {
     "X-RapidAPI-Key": process.env.RAPID_API_KEY,
-    "X-RapidAPI-Host": process.env.RAPID_API_HOST,
+    "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
   },
 };
-
 
 export const fetchData = async (url, options) => {
   const res = await fetch(url, options);

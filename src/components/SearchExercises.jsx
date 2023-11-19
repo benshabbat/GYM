@@ -6,15 +6,14 @@ const SearchExercises = () => {
   const [search, setSearch] = useState("");
   const [exercises, setExercises] = useState([]);
   const [bodyParts, setBodyParts] = useState([]);
-
+  const fetchExercises = async () => {
+    const bodyPartsData = await fetchData(
+      "https://exercisedb.p.rapidapi.com/exercises/bodyPartList",
+      execisesOptions
+    );
+    setBodyParts(["all", ...bodyPartsData]);
+  };
   useEffect(() => {
-    const fetchExercises = async () => {
-      const bodyPartsData = await fetchData(
-        "https://exercisedb.p.rapidapi.com/exercises/bodyPartList",
-        execisesOptions
-      );
-      setBodyParts(["all", ...bodyPartsData]);
-    };
     fetchExercises();
   }, []);
 
@@ -79,9 +78,8 @@ const SearchExercises = () => {
           Search
         </Button>
       </Box>
-      <Box sx={{position:"relative",width:"100%",p:"20px"}}>
-        <HorizontalScrollBar data={bodyParts}/>
-
+      <Box sx={{ position: "relative", width: "100%", p: "20px" }}>
+        <HorizontalScrollBar data={bodyParts} />
       </Box>
     </Stack>
   );
