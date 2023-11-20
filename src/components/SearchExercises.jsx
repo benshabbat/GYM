@@ -2,11 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Box, Stack, TextField, Button, Typography } from "@mui/material";
 import { fetchData, execisesOptions } from "../utils/fetchData";
 import HorizontalScrollBar from "./HorizontalScrollBar";
-const SearchExercises = () => {
+const SearchExercises = ({setExercises,bodyPart, setBodyPart}) => {
   const [search, setSearch] = useState("");
-  const [exercises, setExercises] = useState([]);
   const [bodyParts, setBodyParts] = useState([]);
-  const [bodyPart, setBodyPart] = useState('')
+ 
   const fetchExercises = async () => {
     const bodyPartsData = await fetchData(
       "https://exercisedb.p.rapidapi.com/exercises/bodyPartList",
