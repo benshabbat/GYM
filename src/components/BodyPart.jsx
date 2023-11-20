@@ -1,6 +1,6 @@
 import React from 'react'
 
-const BodyPart = () => {
+const BodyPart = ({bodyPart, setBodyPart}) => {
   return (
     <div>BodyPart</div>
   )
